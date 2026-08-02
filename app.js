@@ -7,7 +7,7 @@ const regions = [...document.querySelectorAll('.editable-region')];
 
 // Bump this key whenever the resume structure changes so an older saved DOM
 // cannot overwrite a newly published layout.
-const storageKey = 'a4-resume-content-v2';
+const storageKey = 'a4-resume-content-v3';
 const originalTemplate = resume.innerHTML;
 let isEditing = false;
 let saveTimer;
