@@ -80,9 +80,9 @@ a { color: inherit; text-decoration: none; }
 
 .resume-header {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 39mm 26mm;
+  grid-template-columns: 32mm minmax(0, 1fr) 26mm;
   align-items: center;
-  gap: 5mm;
+  gap: 6mm;
   padding-bottom: 5.5mm;
   border-bottom: 2px solid var(--ink);
 }
@@ -95,30 +95,29 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: .18em;
 }
 
-h1 { margin: 0; font-size: 29pt; line-height: 1; letter-spacing: -.04em; }
-.headline { margin: 1.4mm 0 0; color: var(--muted); font-size: 8.4pt; }
-
-.school-identity {
-  display: flex;
-  align-items: center;
-  gap: 2mm;
-  width: fit-content;
-  margin-top: 2.2mm;
+.university-emblem {
+  display: grid;
+  place-items: center;
+  width: 32mm;
+  height: 32mm;
+  margin: 0;
 }
 
-.school-identity img {
+.university-emblem img {
   display: block;
-  width: 8mm;
-  height: 8mm;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
-.school-identity div { display: grid; line-height: 1.25; }
-.school-identity strong { color: var(--accent); font-size: 9.5pt; }
-.school-identity span { color: var(--muted); font-size: 7.5pt; }
+.profile-core { min-width: 0; text-align: center; }
+
+h1 { margin: 0; font-size: 29pt; line-height: 1; letter-spacing: -.04em; }
+.headline { margin: 1.5mm 0 0; color: var(--muted); font-size: 8.4pt; }
 
 .availability {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 1.5mm;
   margin-top: 1.8mm;
@@ -137,12 +136,15 @@ h1 { margin: 0; font-size: 29pt; line-height: 1; letter-spacing: -.04em; }
 
 .contact-list {
   display: grid;
-  gap: 1.2mm;
-  margin: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .8mm 3mm;
+  margin: 2.2mm 0 0;
+  padding-top: 1.8mm;
+  border-top: 1px solid var(--line);
   color: var(--muted);
-  font-size: 8.6pt;
+  font-size: 7.5pt;
   font-style: normal;
-  text-align: right;
+  text-align: center;
 }
 
 .portrait {
