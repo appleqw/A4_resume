@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="可在线编辑并导出 PDF 的 A4 单页简历">
+  <title>个人简历</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="toolbar" role="toolbar" aria-label="简历操作">
+    <div class="toolbar__hint">
+      <strong>A4 简历编辑器</strong>
+      <span id="statusText">点击“编辑内容”后，可直接修改简历中的文字</span>
+    </div>
+    <div class="toolbar__actions">
+      <button id="editButton" class="button button--secondary" type="button">编辑内容</button>
+      <button id="resetButton" class="button button--ghost" type="button">恢复模板</button>
+      <button id="printButton" class="button button--primary" type="button">导出 PDF</button>
+    </div>
+  </div>
+
+  <main class="page-shell">
+    <article id="resume" class="resume" aria-label="个人简历">
+      <header class="resume-header editable-region">
+        <div class="identity">
+          <p class="eyebrow">AI ENGINEER · MASTER STUDENT</p>
+          <h1>你的姓名</h1>
+          <p class="headline">人工智能硕士｜应用型 AI / Agent 开发方向</p>
+        </div>
+        <address class="contact-list">
+          <a href="tel:+8613800000000">138-0000-0000</a>
+          <a href="mailto:yourname@example.com">yourname@example.com</a>
+          <span>广东 · 珠海</span>
+          <a href="https://github.com/yourname">github.com/yourname</a>
+        </address>
+      </header>
+
+      <div class="resume-grid">
+        <div class="main-column">
+          <section class="resume-section editable-region">
+            <h2><span>01</span> 个人概述</h2>
+            <p class="summary">人工智能专业硕士研究生，具备软件工程与深度学习背景。拥有模型训练、边缘设备部署、联邦学习研究和技术文档撰写经验，希望从事应用型 AI 或 Agent 开发工作。善于快速理解业务需求，并将算法方案落地为可验证的工程原型。</p>
+          </section>
+
+          <section class="resume-section editable-region">
+            <h2><span>02</span> 项目经历</h2>
+            <div class="entry">
+              <div class="entry__heading">
+                <div><h3>端边云协同的智能频谱识别系统</h3><p class="entry__meta">项目角色 · 算法与端侧部署</p></div>
+                <time>2025.09 — 至今</time>
+              </div>
+              <ul>
+                <li>在 Jetson Nano 端部署轻量级识别模型，实现信号数据的快速识别与结果回传。</li>
+                <li>在云端构建复杂时频分析模型，形成端侧快速筛查、云端精细分析的协同流程。</li>
+                <li>负责模型实验、性能评估与项目文档整理；请在此补充量化指标。</li>
+              </ul>
+            </div>
+            <div class="entry">
+              <div class="entry__heading">
+                <div><h3>无线电地图重建与联邦域泛化</h3><p class="entry__meta">科研项目 · PyTorch / Federated Learning</p></div>
+                <time>2025.10 — 至今</time>
+              </div>
+              <ul>
+                <li>研究多区域数据下的无线电地图重建与定位，搭建集中预训练、个性化联邦训练及未见区域验证流程。</li>
+                <li>设计地理相似度、留出误差与测试时自适应等泛化策略，使用 MSE、MAE、PSNR、Corr 等指标评估。</li>
+                <li>请在此填写最有说服力的实验提升，例如“Corr 从 X 提升至 Y”。</li>
+              </ul>
+            </div>
+            <div class="entry">
+              <div class="entry__heading">
+                <div><h3>端边云钢铁表面缺陷检测</h3><p class="entry__meta">本科项目 · 深度学习 / Java</p></div>
+                <time>2023.03 — 2024.05</time>
+              </div>
+              <ul>
+                <li>训练钢铁表面缺陷检测模型，并参与端侧检测、云端管理与结果回传方案设计。</li>
+                <li>负责模型训练、实验对比和项目文档撰写；请补充数据集规模、精度与推理速度。</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="resume-section editable-region">
+            <h2><span>03</span> 科研与成果</h2>
+            <div class="compact-entry">
+              <div><strong>联邦学习相关会议论文</strong><p>中国电子频谱学术会议 · 请填写作者顺序、论文题目及发表时间</p></div>
+              <time>2025</time>
+            </div>
+          </section>
+        </div>
+
+        <aside class="side-column">
+          <section class="resume-section editable-region">
+            <h2><span>04</span> 教育背景</h2>
+            <div class="side-entry">
+              <time>2025 — 2028</time>
+              <h3>暨南大学</h3>
+              <p>人工智能 · 硕士</p>
+              <small>主修：机器学习、深度学习等</small>
+            </div>
+            <div class="side-entry">
+              <time>2021 — 2025</time>
+              <h3>本科院校名称</h3>
+              <p>软件工程 · 本科</p>
+              <small>请补充 GPA、排名或奖学金</small>
+            </div>
+          </section>
+
+          <section class="resume-section editable-region">
+            <h2><span>05</span> 专业技能</h2>
+            <div class="skill-group">
+              <h3>AI & DATA</h3>
+              <p>Python · PyTorch · 深度学习 · 联邦学习 · 模型评估</p>
+            </div>
+            <div class="skill-group">
+              <h3>ENGINEERING</h3>
+              <p>Linux · Git · Jetson Nano · Java · MySQL · HTML/CSS</p>
+            </div>
+            <div class="skill-group">
+              <h3>正在补充</h3>
+              <p>LLM API · RAG · Agent 工作流 · FastAPI · Docker</p>
+            </div>
+          </section>
+
+          <section class="resume-section editable-region">
+            <h2><span>06</span> 奖项证书</h2>
+            <ul class="plain-list">
+              <li>大学英语六级（CET-6）</li>
+              <li>研究生奖学金 · 请填写等级</li>
+              <li>竞赛/荣誉 · 请补充</li>
+            </ul>
+          </section>
+
+          <section class="resume-section editable-region">
+            <h2><span>07</span> 个人优势</h2>
+            <p class="side-copy">具有跨算法、工程与文档表达的复合经验；能够在陌生领域快速调研、复现实验并形成结构化结论。</p>
+          </section>
+        </aside>
+      </div>
+    </article>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
