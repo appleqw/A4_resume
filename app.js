@@ -5,7 +5,9 @@ const printButton = document.querySelector('#printButton');
 const statusText = document.querySelector('#statusText');
 const regions = [...document.querySelectorAll('.editable-region')];
 
-const storageKey = 'a4-resume-content-v1';
+// Bump this key whenever the resume structure changes so an older saved DOM
+// cannot overwrite a newly published layout.
+const storageKey = 'a4-resume-content-v2';
 const originalTemplate = resume.innerHTML;
 let isEditing = false;
 let saveTimer;
